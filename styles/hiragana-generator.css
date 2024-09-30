@@ -1,0 +1,60 @@
+body {
+  background-color: rgb(19, 21, 24);
+}
+
+p, a {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: 600;
+  color: aliceblue;
+  padding-left: 10px;
+}
+
+.gen-hrgna-btn-div {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.title {
+  font-family: monospace, 'Courier New', Courier;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.hiragana-image {
+  display: block;
+}
+
+.hiragana-answer-input {
+  display: block;
+  width: 128px;
+}
+
+button {
+  margin: 16px 6px;
+}
+
+.level-btn {
+  border: 0px solid;
+  border-radius: 50%;
+  background-color: aliceblue;
+  padding: 22px 4px;
+  cursor: pointer;
+}
+
+.level-btn:hover {
+  background-color: rgba(240, 248, 255, 0.875)
+}
+
+.level-btn:active {
+  background-color: rgba(240, 248, 255, 0.8)
+}
+
+.hirigana-image {
+  background-color: aliceblue;
+  padding: 32px;
+  border-radius: 50%;
+  margin: 22px;
+}

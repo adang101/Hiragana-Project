@@ -1,7 +1,8 @@
 genHiraganaBtn.addEventListener("click", generateHiragana);
 
 function generateHiragana() {
-  randomizeHiraganaSoundCategory(5);
+  removeLevelSelect();
+  randomizeHiraganaSoundCategory(hrgnaLevel);
   selectSoundFromHiraganaCategory();
 
   hrgnaImg = document.createElement("IMG");
@@ -9,20 +10,26 @@ function generateHiragana() {
   hrgnaImg.setAttribute("height", "128");
   hrgnaImg.setAttribute("alt", "Hiragana Image");
   hrgnaImg.setAttribute("class", "hirigana-image");
+  hrgnaImg.setAttribute("id", "hrgna-img");
 
-  genHrgnaBtnDiv.appendChild(hrgnaImg);
+
+  genHrgnaImgBox.appendChild(hrgnaImg);
 
   hrgnaAnswrInput = document.createElement("input");
   hrgnaAnswrInput.setAttribute("id", "hrgnaAnswrInput");
   hrgnaAnswrInput.setAttribute("class", "hiragana-answer-input");
   hrgnaAnswrInput.setAttribute("placeholder", "Answer");
-  genHrgnaBtnDiv.appendChild(hrgnaAnswrInput);
+  genHrgnaImgBox.appendChild(hrgnaAnswrInput);
 
   genHiraganaBtn.remove();
 }
 
+function removeLevelSelect() {
+  lvlSelectBox.innerHTML = "";
+}
+
 function randomizeHiraganaSoundCategory(level) {
-  let numRand
+  let numRand;
   if(level === 1) {
     numRand = Math.floor(Math.random() * (3 - 1) ) + 1;
   } else if(level === 2) {
@@ -64,7 +71,7 @@ function randomizeHiraganaSoundCategory(level) {
 }
 
 function selectSoundFromHiraganaCategory() {
-  let numRand
+  let numRand;
   let soundCategory = hrgnaSoundCtgry.slice(0,1);
   if(soundCategory === "k" ||
     soundCategory === "s" ||

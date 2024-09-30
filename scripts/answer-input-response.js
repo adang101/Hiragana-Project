@@ -1,3 +1,8 @@
+
+
+
+
+/*
 let hrgnaAnswrInput = document.getElementById("hrgnaAnswrInput");
 let userHrgnaAnswer = hrgnaAnswrInput.value;
 
@@ -41,3 +46,4 @@ function checkAnswer() {
 function correctAnswer() {
 
 }
+*/
